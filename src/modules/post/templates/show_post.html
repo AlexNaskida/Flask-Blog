@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ slug }} post
+{% endblock %}
+
+
+{% block main %}
+<br/><br/><br/>
+<div style="justify-content:center; display: flex;">
+    <div class="w-75 shadow-lg p-3 mb-5 rounded">
+        <h2>{{ post.title }}</h2>
+        By: {{ post.poster.username }}<br>
+        Slug: {{ post.slug }}<br>
+        Content: {{ post.content | safe }} <br/>
+        Post ID: {{ post.id }}
+        <br/><br/>
+        <a class="btn btn-secondary" href="{{ url_for('post.blog') }}">Back To Blog</a>
+        <br/>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign up
+{% endblock %}
+
+
+{% block main %}
+<br/><br/>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<div style="text-align: center;">
+    <h1>Sign Up </h1>
+</div>
+<br/>
+<div style="justify-content:center; display: flex;">
+    <div style="background-color: #6f706f;" class="w-50 shadow-lg p-3 mb-5 rounded">
+        <form method="POST">
+
+            {{ form.hidden_tag() }}
+            <div class="row">
+              <div class="col">
+                {{ form.firstname.label(class="form-label") }}
+                {{ form.firstname(class="form-control") }}
+              </div>
+              <div class="col">
+                  {{ form.lastname.label(class="form-label") }}
+                  {{ form.lastname(class="form-control") }}
+              </div>
+            </div>
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control") }}
+
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control") }}
+
+            {{ form.password_confirm.label(class="form-label") }}
+            {{ form.password_confirm(class="form-control") }}
+            <br/>
+            <div style="justify-content:center; display: flex;">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+        <p style="justify-content:center; color:#FFFFFF; display: flex;">Already have an account?
+            <a style="justify-content:center; color:#FFFFFF;" href="{{ url_for('auth.login') }}">Login</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+
+{% block main %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<div style="text-align: right; position:relative; top:55px; left:120px;">
+    <a class="btn btn-info" href="{{ url_for('post.post') }}">Create New Post</a>
+</div>
+
+<center><h1>Blog posts</h1></center>
+<br/><br/><br/>
+<div style="justify-content:center; display: relative;">
+    {% for post in posts %}
+        <center>
+            <div style="background-color: #6f706f;" class="w-75 shadow-lg p-3 mb-5 rounded">
+                <div align="left">
+                    <center><h2>{{ post.title | capitalize }}</h2></center>
+                    By: {{ post.poster.username }}
+                    <br/>
+                    slug: {{ post.slug }}
+                    <br/>
+                    content: {{ post.content | safe }}
+                    <br/><br/><br/>
+
+                    <a class="btn btn-success" href="{{ url_for('post.show_post', slug=post.slug) }}">Show</a>
+                    <a class="btn btn-light" href="{{ url_for('post.update', slug=post.slug, id=post.id) }}">Edit</a>
+                    <a class="btn btn-danger" href="{{ url_for('post.delete_post', slug=post.slug, id=post.id) }}">Delete</a>
+
+                    {% if current_user.is_authenticated %}
+                        {% if current_user.has_liked_post(post) %}
+                            <a style="position: relative; left: 635px;" class="btn btn-secondary" href="{{ url_for('post.like_action', id=post.id, action='unlike') }}">Unlike</a>
+                        {% else %}
+                            <a style="position: relative; left: 635px;" class="btn btn-primary" href="{{ url_for('post.like_action', id=post.id, action='like') }}">Like</a>
+                        {% endif %}
+                    {% else %}
+                        <a style="position: relative; left: 635px;" class="btn btn-primary" href="{{ url_for('post.like_action', id=post.id, action='like') }}">Like</a>
+                    {% endif %}
+                </div>
+            </div>
+        </center>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+

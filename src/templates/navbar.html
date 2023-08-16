@@ -1,0 +1,49 @@
+<link href="{{ url_for('static', filename='css/navbar.css') }}"  rel="stylesheet">
+<nav class="navbar navbar-expand-lg  navbar-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-main" href="{{ url_for('main.main') }}">Myblog</a>
+        </li>
+      </ul>
+        <div class="components">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('post.blog') }}">Posts</a>
+                </li>
+
+                {% if current_user.is_authenticated %}
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('dashboard.dashboard') }}">Profile</a>
+                </li>
+
+
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('auth.login') }}">Sign In</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('auth.signup') }}">Sign up</a>
+                </li>
+
+                {% endif %}
+            </ul>
+        </div>
+        <dev class="search-bar">
+            <form method="POST" action="#" class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </dev>
+    </div>
+  </div>
+</nav>
+

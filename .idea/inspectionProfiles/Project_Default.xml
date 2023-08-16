@@ -1,0 +1,116 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="94">
+            <item index="0" class="java.lang.String" itemvalue="awscrt" />
+            <item index="1" class="java.lang.String" itemvalue="GeoIP" />
+            <item index="2" class="java.lang.String" itemvalue="pyVNC" />
+            <item index="3" class="java.lang.String" itemvalue="KismetCaptureRtladsb" />
+            <item index="4" class="java.lang.String" itemvalue="pygame" />
+            <item index="5" class="java.lang.String" itemvalue="grokevt" />
+            <item index="6" class="java.lang.String" itemvalue="PyInstaller" />
+            <item index="7" class="java.lang.String" itemvalue="Brlapi" />
+            <item index="8" class="java.lang.String" itemvalue="KismetCaptureRtl433" />
+            <item index="9" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="10" class="java.lang.String" itemvalue="pycups" />
+            <item index="11" class="java.lang.String" itemvalue="kali-tweaks" />
+            <item index="12" class="java.lang.String" itemvalue="ssdeep" />
+            <item index="13" class="java.lang.String" itemvalue="vinetto" />
+            <item index="14" class="java.lang.String" itemvalue="PyGObject" />
+            <item index="15" class="java.lang.String" itemvalue="Flask-Classful" />
+            <item index="16" class="java.lang.String" itemvalue="python-ldap" />
+            <item index="17" class="java.lang.String" itemvalue="pcapy" />
+            <item index="18" class="java.lang.String" itemvalue="ivre" />
+            <item index="19" class="java.lang.String" itemvalue="tables" />
+            <item index="20" class="java.lang.String" itemvalue="pymssql" />
+            <item index="21" class="java.lang.String" itemvalue="cmd2" />
+            <item index="22" class="java.lang.String" itemvalue="anyjson" />
+            <item index="23" class="java.lang.String" itemvalue="routersploit" />
+            <item index="24" class="java.lang.String" itemvalue="shellfire" />
+            <item index="25" class="java.lang.String" itemvalue="KismetCaptureFreaklabsZigbee" />
+            <item index="26" class="java.lang.String" itemvalue="gpg" />
+            <item index="27" class="java.lang.String" itemvalue="zim" />
+            <item index="28" class="java.lang.String" itemvalue="pyodbc" />
+            <item index="29" class="java.lang.String" itemvalue="crackmapexec" />
+            <item index="30" class="java.lang.String" itemvalue="kiwisolver" />
+            <item index="31" class="java.lang.String" itemvalue="gattlib" />
+            <item index="32" class="java.lang.String" itemvalue="gps" />
+            <item index="33" class="java.lang.String" itemvalue="python-apt" />
+            <item index="34" class="java.lang.String" itemvalue="wordlistraider" />
+            <item index="35" class="java.lang.String" itemvalue="wifipumpkin3" />
+            <item index="36" class="java.lang.String" itemvalue="backdoor-factory" />
+            <item index="37" class="java.lang.String" itemvalue="odfpy" />
+            <item index="38" class="java.lang.String" itemvalue="flatbuffers" />
+            <item index="39" class="java.lang.String" itemvalue="pure-eval" />
+            <item index="40" class="java.lang.String" itemvalue="KismetCaptureRtlamr" />
+            <item index="41" class="java.lang.String" itemvalue="PySecretSOCKS" />
+            <item index="42" class="java.lang.String" itemvalue="wig-ng" />
+            <item index="43" class="java.lang.String" itemvalue="requests-raw" />
+            <item index="44" class="java.lang.String" itemvalue="faradaysec" />
+            <item index="45" class="java.lang.String" itemvalue="humanize" />
+            <item index="46" class="java.lang.String" itemvalue="KismetCaptureBtGeiger" />
+            <item index="47" class="java.lang.String" itemvalue="Mako" />
+            <item index="48" class="java.lang.String" itemvalue="PyRIC" />
+            <item index="49" class="java.lang.String" itemvalue="gyp" />
+            <item index="50" class="java.lang.String" itemvalue="specan" />
+            <item index="51" class="java.lang.String" itemvalue="dhcpig" />
+            <item index="52" class="java.lang.String" itemvalue="pycurl" />
+            <item index="53" class="java.lang.String" itemvalue="pyregfi" />
+            <item index="54" class="java.lang.String" itemvalue="wsaccel" />
+            <item index="55" class="java.lang.String" itemvalue="binwalk" />
+            <item index="56" class="java.lang.String" itemvalue="cheroot" />
+            <item index="57" class="java.lang.String" itemvalue="cryptography37" />
+            <item index="58" class="java.lang.String" itemvalue="jq" />
+            <item index="59" class="java.lang.String" itemvalue="pluggy" />
+            <item index="60" class="java.lang.String" itemvalue="lightdm-gtk-greeter-settings" />
+            <item index="61" class="java.lang.String" itemvalue="awscli" />
+            <item index="62" class="java.lang.String" itemvalue="maryam" />
+            <item index="63" class="java.lang.String" itemvalue="vboxapi" />
+            <item index="64" class="java.lang.String" itemvalue="wifite" />
+            <item index="65" class="java.lang.String" itemvalue="psycopg2cffi" />
+            <item index="66" class="java.lang.String" itemvalue="jdcal" />
+            <item index="67" class="java.lang.String" itemvalue="cupshelpers" />
+            <item index="68" class="java.lang.String" itemvalue="donut-shellcode" />
+            <item index="69" class="java.lang.String" itemvalue="goofile" />
+            <item index="70" class="java.lang.String" itemvalue="pygraphviz" />
+            <item index="71" class="java.lang.String" itemvalue="louis" />
+            <item index="72" class="java.lang.String" itemvalue="django-crum" />
+            <item index="73" class="java.lang.String" itemvalue="python-magic-ahupp" />
+            <item index="74" class="java.lang.String" itemvalue="mistune0" />
+            <item index="75" class="java.lang.String" itemvalue="pyminifier" />
+            <item index="76" class="java.lang.String" itemvalue="lz4" />
+            <item index="77" class="java.lang.String" itemvalue="torbrowser-launcher" />
+            <item index="78" class="java.lang.String" itemvalue="GDAL" />
+            <item index="79" class="java.lang.String" itemvalue="witnessme" />
+            <item index="80" class="java.lang.String" itemvalue="aardwolf" />
+            <item index="81" class="java.lang.String" itemvalue="sherlock" />
+            <item index="82" class="java.lang.String" itemvalue="neo4j" />
+            <item index="83" class="java.lang.String" itemvalue="plecost" />
+            <item index="84" class="java.lang.String" itemvalue="mpmath" />
+            <item index="85" class="java.lang.String" itemvalue="PyBluez" />
+            <item index="86" class="java.lang.String" itemvalue="debugpy" />
+            <item index="87" class="java.lang.String" itemvalue="Certipy" />
+            <item index="88" class="java.lang.String" itemvalue="crowbar" />
+            <item index="89" class="java.lang.String" itemvalue="debtags" />
+            <item index="90" class="java.lang.String" itemvalue="python-snappy" />
+            <item index="91" class="java.lang.String" itemvalue="wfuzz" />
+            <item index="92" class="java.lang.String" itemvalue="theHarvester" />
+            <item index="93" class="java.lang.String" itemvalue="websploit" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="str.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

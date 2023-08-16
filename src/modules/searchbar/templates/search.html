@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search  Page
+{% endblock %}
+
+
+{% block main %}
+    <br><br><br>
+    <h1>You searched for...</h1> <em><h2>{{ searched }}</h2></em>
+    <br><br><br>
+    {% if posts %}
+
+    {% for post in posts %}
+       <br/>
+        <h2>{{ post.title }}</h2>
+        By: {{ post.author }}<br>
+        {{ post.slug }}<br>
+        {{ post.content | safe }}
+        <br/>
+        <br/>
+    {% endfor %}
+    {% else %}
+        <h2>Couldn't find anything for {{ searched }}</h2>
+    {% endif %}
+
+{% endblock %}

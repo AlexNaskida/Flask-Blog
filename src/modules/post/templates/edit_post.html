@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post Update
+{% endblock %}
+
+
+{% block main %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<div style="text-align: center;">
+    <h1>This is update page</h1>
+</div>
+<br/><br/>
+
+<div style="justify-content:center; display: flex;">
+    <div style="background-color: #50D4FD;" class="w-75 shadow-lg p-3 mb-5 rounded">
+        <form action="{{ update_post.id }}" method="POST">
+                {{ form.hidden_tag() }}
+
+                {{ form.slug.label(class="form-label") }}
+                {{ form.slug(class="form-control", value=update_post.slug) }}
+                <br/>
+                {{ form.title.label(class="form-label") }}
+                {{ form.title(class="form-control", value=update_post.title) }}
+                <br/>
+                {{ form.content.label(class="form-label") }}
+                <textarea name="content" class="form-control">{{ update_post.content }}</textarea>
+                <br/>
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

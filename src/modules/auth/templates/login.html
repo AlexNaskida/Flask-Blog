@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign in
+{% endblock %}
+
+{% block main %}
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<br/><br/><br/>
+
+<div style="text-align: center;">
+    <h1>Account Login</h1>
+</div>
+<br/><br/>
+
+<div style="justify-content:center; display: flex;">
+    <div style="background-color: #6f706f;" class="w-50 shadow-lg p-3 mb-5 rounded">
+        <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+        <br/>
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+        <br/>
+        <div style="justify-content:center; display: flex;">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Dashboard
+{% endblock %}
+
+
+{% block main %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endfor %}
+
+<br/>
+<h1>Profile</h1>
+<br/>
+
+<div class="card border-bottom">
+  <div class="card-body">
+    <p class="card-text">
+        <div class="container">
+            <div class="row">
+                <dev class="col-8">
+                    <img style="margin-bottom: 40px" src="{{ url_for('static', filename='img/user.png') }}" width="170" align="left">
+                </dev>
+                <h1>
+                    <h1>{{ current_user.name | capitalize }} {{ current_user.lastname | capitalize }}</h1>
+                </div>
+
+                 <div class="col-4">
+
+                    <strong>User ID:</strong>{{ current_user.id }}<br/>
+
+
+                    <strong>Username:</strong>{{ current_user.username }}<br/>
+                    <strong>Email:</strong>{{ current_user.email }}<br/>
+                    <br/><br/><br/>
+                 </div>
+            </div>
+        </div>
+  </div>
+
+{% endblock %}
